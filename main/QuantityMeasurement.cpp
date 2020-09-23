@@ -32,4 +32,14 @@ public:
 
         return false;
     }
+
+     bool operator!=(QuantityMeasurement other) const
+    {
+        if (this->unit_type.type == other.unit_type.type && this->unit_type.value == other.unit_type.value)
+        {
+            return (this->value == other.value);
+        }
+
+        return (this->unit_type.type == other.unit_type.type);
+    }
 };

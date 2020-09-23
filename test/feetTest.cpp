@@ -33,6 +33,14 @@ TEST(LengthComparisionTest, __first_refrance_and_second_refrance_should_not_be_e
     ASSERT_NE(quantity1, quantity2);
 }
 
+//TC1.4
+
+TEST(LengthComparisionTest, _two_different_type_of_quantity_should_not_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::FEET);
+    QuantityMeasurement quantity2(1.0, unit::INCH);
+    ASSERT_NE(quantity1, quantity2);
+}
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

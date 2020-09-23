@@ -6,7 +6,6 @@ public:
     enum UNIT_TYPE
     {
         LENGTH,
-
     };
 
     double value;
@@ -20,4 +19,5 @@ private:
 
 public:
     static const unit FEET;
+    static const unit INCH;
 };
