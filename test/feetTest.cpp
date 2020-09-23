@@ -70,11 +70,19 @@ TEST(LengthComparisionTest, _first_inch_refrarnce_and_second_refrance_should_be_
 }
 
 //TC 1.9
-TEST(LengthComparisionTest, __first_inch_refrance_and_second_inch_refrance_should_not_be_equal)
+TEST(LengthComparisionTest, _first_inch_refrance_and_second_inch_refrance_should_not_be_equal)
 {
     QuantityMeasurement *quantity1 = new QuantityMeasurement(1.0, unit::FEET);
     QuantityMeasurement *quantity2 = new QuantityMeasurement(1.0, unit::FEET);
     ASSERT_NE(quantity1, quantity2);
+}
+
+//TC 1.10
+TEST(LengthComparisionTest, _two_same_inch_type_of_quantity_should_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::INCH);
+    QuantityMeasurement quantity2(1.0, unit::INCH);
+    ASSERT_EQ(quantity1, quantity2);
 }
 
 int main(int argc, char **argv)
