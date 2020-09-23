@@ -102,7 +102,7 @@ TEST(LengthComparisionTest, _three_feet_and_one_yard_should_be_equal)
 }
 
 //TC 1.13
-TEST(LengthComparisionTest, one_feet_and_one_yard__should_not_be_equal)
+TEST(LengthComparisionTest, _one_feet_and_one_yard__should_not_be_equal)
 {
     QuantityMeasurement quantity1(1.0, unit::FEET);
     QuantityMeasurement quantity2(1.0, unit::YARD);
@@ -110,12 +110,21 @@ TEST(LengthComparisionTest, one_feet_and_one_yard__should_not_be_equal)
 }
 
 //TC 1.14
-TEST(LengthComparisionTest, one_inch_and_one_yard__should_not_be_equal)
+TEST(LengthComparisionTest, _one_inch_and_one_yard__should_not_be_equal)
 {
     QuantityMeasurement quantity1(1.0, unit::INCH);
     QuantityMeasurement quantity2(1.0, unit::YARD);
     ASSERT_NE(quantity1, quantity2);
 }
+
+//TC 1.15
+TEST(LengthComparisionTest, _one_yard_and_thirtysix_inch_should_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::YARD);
+    QuantityMeasurement quantity2(36.0, unit::INCH);
+    ASSERT_EQ(quantity1, quantity2);
+}
+
 
 int main(int argc, char **argv)
 {
