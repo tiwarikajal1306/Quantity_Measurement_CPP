@@ -93,6 +93,22 @@ TEST(LengthComparisionTest, _zero_inch_and_zero_inch__should_be_equal)
     ASSERT_EQ(quantity1, quantity2);
 }
 
+//UC2
+TEST(LengthComparisionTest, _three_feet_and_one_yard_should_be_equal)
+{
+    QuantityMeasurement quantity1(3.0, unit::FEET);
+    QuantityMeasurement quantity2(1.0, unit::YARD);
+    ASSERT_EQ(quantity1, quantity2);
+}
+
+//TC 1.13
+TEST(LengthComparisionTest, one_feet_and_one_yard__should_not_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::FEET);
+    QuantityMeasurement quantity2(1.0, unit::YARD);
+    ASSERT_NE(quantity1, quantity2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
