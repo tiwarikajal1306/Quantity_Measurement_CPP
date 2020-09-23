@@ -198,6 +198,15 @@ TEST(VolumeComparisionTest, _addition_of_one_litre_and_thousand_ml_should_be_two
     quantity_measurement measurement(&litre, &ml);
     ASSERT_EQ(2.0, measurement.add_quantity(unit::LITRE.value));
 }
+
+//UC7
+TEST(WeightComparisionTest, _one_kg_and_thousand_gram_should_be_equal)
+{
+    quantity kg(1.0, unit::KG);
+    quantity gram(1000.0, unit::GRAM);
+    ASSERT_EQ(kg, gram);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

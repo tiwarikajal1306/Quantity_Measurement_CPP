@@ -4,7 +4,8 @@ public:
     enum UNIT_TYPE
     {
         LENGTH,
-        VOLUME
+        VOLUME,
+        WEIGHT
     };
 
     double value;
@@ -24,4 +25,6 @@ public:
     static const unit GALLON;
     static const unit LITRE;
     static const unit ML;
+    static const unit GRAM;
+    static const unit KG;
 };
