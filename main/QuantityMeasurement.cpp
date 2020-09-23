@@ -6,7 +6,7 @@ class QuantityMeasurement
     unit unit_type;
 
 public:
-    QuantityMeasurement(double value, unit unit_type) : unit_type(unit_type), value(value) {}
+    QuantityMeasurement(double value, unit unit_type) : unit_type(unit_type), value(value * (unit_type.value)) {}
 
     bool operator==(QuantityMeasurement other) const
     {
