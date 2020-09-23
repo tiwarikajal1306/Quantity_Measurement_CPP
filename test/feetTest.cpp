@@ -16,7 +16,7 @@ TEST(LengthComparisionTest, _zero_feet_and_zero_feet__should_be_equal)
 }
 
 //TC 1.2
-TEST(LengthComparisionTest, _null_feet_and_1feet__should_not_be_equal)
+TEST(LengthComparisionTest, _null_feet_and_one_feet__should_not_be_equal)
 {
     QuantityMeasurement quantity1(1.0, unit::FEET);
     ASSERT_NE(&quantity1, nullptr);
@@ -45,12 +45,20 @@ TEST(LengthComparisionTest, _two_different_type_of_quantity_should_not_be_equal)
     QuantityMeasurement quantity2(1.0, unit::INCH);
     ASSERT_NE(quantity1, quantity2);
 }
+
 //TC 1.6
 TEST(LengthComparisionTest, _two_same_type_of_quantity_should_be_equal)
 {
     QuantityMeasurement quantity1(1.0, unit::FEET);
     QuantityMeasurement quantity2(1.0, unit::FEET);
     ASSERT_EQ(quantity1, quantity2);
+}
+
+//TC 1.7
+TEST(LengthComparisionTest, _null_inch_and_one_inch__should_not_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::INCH);
+    ASSERT_NE(&quantity1, nullptr);
 }
 
 int main(int argc, char **argv)
