@@ -1,11 +1,11 @@
-#include "../main/feet.h"
 #include <gtest/gtest.h>
 #include "../main/QuantityMeasurement.cpp"
 
-TEST(LengthComparisionTest, _one_feet_and_twelve_inch__should_be_equal)
+TEST(LengthComparisionTest, _zero_feet_and_zero_feet__should_be_equal)
 {
-    QuantityMeasurement quantity;
-    ASSERT_EQ(12, quantity.unit_converter(1));
+    QuantityMeasurement quantity1(0.0, unit::FEET);
+    QuantityMeasurement quantity2(0.0, unit::FEET);
+    ASSERT_EQ(quantity1, quantity2);
 }
 
 int main(int argc, char **argv)
