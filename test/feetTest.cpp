@@ -17,6 +17,22 @@ TEST(LengthComparisionTest, _null_feet_and_1feet__should_not_be_equal)
     ASSERT_NE(&quantity1, nullptr);
 }
 
+//TC1.3
+
+TEST(LengthComparisionTest, __two_refrance_point_to_same_address_should_be_equal)
+{
+    QuantityMeasurement *quantity1 = new QuantityMeasurement(1.0, unit::FEET);
+    QuantityMeasurement *quantity2 = quantity1;
+    ASSERT_EQ(quantity1, quantity2);
+}
+
+TEST(LengthComparisionTest, __first_refrance_and_second_refrance_should_not_be_equal)
+{
+    QuantityMeasurement *quantity1 = new QuantityMeasurement(1.0, unit::FEET);
+    QuantityMeasurement *quantity2 = new QuantityMeasurement(1.0, unit::FEET);
+    ASSERT_NE(quantity1, quantity2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
