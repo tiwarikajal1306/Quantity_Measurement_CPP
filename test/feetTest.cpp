@@ -61,6 +61,22 @@ TEST(LengthComparisionTest, _null_inch_and_one_inch__should_not_be_equal)
     ASSERT_NE(&quantity1, nullptr);
 }
 
+//TC 1.8
+TEST(LengthComparisionTest, _first_inch_refrarnce_and_second_refrance_should_be_equal)
+{
+    QuantityMeasurement *quantity1 = new QuantityMeasurement(1.0, unit::INCH);
+    QuantityMeasurement *quantity2 = quantity1;
+    ASSERT_EQ(quantity1, quantity2);
+}
+
+//TC 1.9
+TEST(LengthComparisionTest, __first_inch_refrance_and_second_inch_refrance_should_not_be_equal)
+{
+    QuantityMeasurement *quantity1 = new QuantityMeasurement(1.0, unit::FEET);
+    QuantityMeasurement *quantity2 = new QuantityMeasurement(1.0, unit::FEET);
+    ASSERT_NE(quantity1, quantity2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
