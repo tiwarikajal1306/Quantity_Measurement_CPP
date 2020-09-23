@@ -109,6 +109,14 @@ TEST(LengthComparisionTest, one_feet_and_one_yard__should_not_be_equal)
     ASSERT_NE(quantity1, quantity2);
 }
 
+//TC 1.14
+TEST(LengthComparisionTest, one_inch_and_one_yard__should_not_be_equal)
+{
+    QuantityMeasurement quantity1(1.0, unit::INCH);
+    QuantityMeasurement quantity2(1.0, unit::YARD);
+    ASSERT_NE(quantity1, quantity2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
