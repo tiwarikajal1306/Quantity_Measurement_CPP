@@ -85,6 +85,14 @@ TEST(LengthComparisionTest, _two_same_inch_type_of_quantity_should_be_equal)
     ASSERT_EQ(quantity1, quantity2);
 }
 
+//TC 1.11
+TEST(LengthComparisionTest, _zero_inch_and_zero_inch__should_be_equal)
+{
+    QuantityMeasurement quantity1(0.0, unit::INCH);
+    QuantityMeasurement quantity2(0.0, unit::INCH);
+    ASSERT_EQ(quantity1, quantity2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
