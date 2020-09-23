@@ -180,6 +180,16 @@ TEST(VolumeComparisionTest, _one_litre_and_thousand_ml_should_be_equal)
     quantity ml(1000.0, unit::ML);
     ASSERT_EQ(litre, ml);
 }
+
+//UC 6
+TEST(VolumeComparisionTest,
+     _addition_of_one_gallon_and_three_point_seven_eight_litre_should_be_seven_point_five_six_litre)
+{
+    quantity first_gallon(1.0, unit::GALLON);
+    quantity second_litre(3.78, unit::LITRE);
+    quantity_measurement measurement(&first_gallon, &second_litre);
+    ASSERT_EQ(7.56, measurement.add_quantity(unit::LITRE.value));
+}
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
