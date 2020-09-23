@@ -222,6 +222,15 @@ TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_tho
     ASSERT_EQ(1001.0, measurement.add_quantity(unit::KG.value));
 }
 
+//UC 8
+TEST(TemperatureComparisionTest, _one_212F_and_100C_should_be_equal)
+{
+    quantity value_in_fahrenheit(212.0, unit::FAHRENHITE);
+    quantity value_in_celsius(100.0, unit::CELSIUS);
+    quantity_measurement measurement;
+    ASSERT_EQ(value_in_fahrenheit.value, measurement.convert_celsius_to_fahrenheit(value_in_celsius.value));
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

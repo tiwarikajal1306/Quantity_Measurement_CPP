@@ -5,7 +5,8 @@ public:
     {
         LENGTH,
         VOLUME,
-        WEIGHT
+        WEIGHT,
+        TEMPERATURE
     };
 
     double value;
@@ -28,4 +29,6 @@ public:
     static const unit GRAM;
     static const unit KG;
     static const unit TONNE;
+    static const unit FAHRENHITE;
+    static const unit CELSIUS;
 };

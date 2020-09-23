@@ -12,3 +12,5 @@ const unit unit::ML(1.0, unit::VOLUME);
 const unit unit::GRAM(1.0, unit::WEIGHT);
 const unit unit::KG(1000.0, unit::WEIGHT);
 const unit unit::TONNE(1000000.0, unit::WEIGHT);
+const unit unit::FAHRENHITE(1.0, unit::TEMPERATURE);
+const unit unit::CELSIUS(1.0, unit::TEMPERATURE);

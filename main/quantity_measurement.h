@@ -7,8 +7,10 @@ private:
     quantity *second_quantity;
 
 public:
+    quantity_measurement(){}
     quantity_measurement(quantity *, quantity *);
     double add_quantity(const double);
+    double convert_celsius_to_fahrenheit(double);
 };
 
 quantity_measurement::quantity_measurement(quantity *first_quantity, quantity *second_quantity)
@@ -22,4 +24,9 @@ double quantity_measurement::add_quantity(const double conversion_factor)
     }
 
     return 0.0;
+}
+
+double quantity_measurement::convert_celsius_to_fahrenheit(double value)
+{
+    return (value * 1.8 + 32);
 }
