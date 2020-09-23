@@ -1,14 +1,15 @@
 #include "unit.h"
 
-class QuantityMeasurement
+class quantity
 {
+public:
     double value;
     unit unit_type;
 
 public:
-    QuantityMeasurement(double value, unit unit_type) : unit_type(unit_type), value(value * (unit_type.value)) {}
+    quantity(double value, unit unit_type) : unit_type(unit_type), value(value * (unit_type.value)) {}
 
-    bool operator==(QuantityMeasurement other) const
+    bool operator==(quantity other) const
     {
         if (this->unit_type.type == other.unit_type.type)
         {
@@ -18,7 +19,7 @@ public:
         return false;
     }
 
-    bool operator==(QuantityMeasurement *other) const
+    bool operator==(quantity *other) const
     {
         if (this == nullptr && other == nullptr)
         {
@@ -33,7 +34,7 @@ public:
         return false;
     }
 
-     bool operator!=(QuantityMeasurement other) const
+     bool operator!=(quantity other) const
     {
         if (this->unit_type.type == other.unit_type.type && this->unit_type.value == other.unit_type.value)
         {
