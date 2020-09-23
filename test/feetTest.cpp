@@ -125,7 +125,13 @@ TEST(LengthComparisionTest, _one_yard_and_thirtysix_inch_should_be_equal)
     ASSERT_EQ(quantity1, quantity2);
 }
 
-
+//UC 3
+TEST(LengthComparisionTest, _two_inch_and_five_cm_should_be_equal)
+{
+    QuantityMeasurement quantity1(2.0, unit::INCH);
+    QuantityMeasurement quantity2(5.0, unit::CM);
+    ASSERT_EQ(quantity1, quantity2);
+}
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
