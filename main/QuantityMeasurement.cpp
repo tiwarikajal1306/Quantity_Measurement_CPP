@@ -17,4 +17,19 @@ public:
 
         return false;
     }
+
+    bool operator==(QuantityMeasurement *other) const
+    {
+        if (this == nullptr && other == nullptr)
+        {
+            return false;
+        }
+
+        if (this->unit_type.type == other->unit_type.type)
+        {
+            return (this->value == other->value);
+        }
+
+        return false;
+    }
 };
