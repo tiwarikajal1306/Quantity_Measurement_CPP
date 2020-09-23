@@ -207,12 +207,19 @@ TEST(WeightComparisionTest, _one_kg_and_thousand_gram_should_be_equal)
     ASSERT_EQ(kg, gram);
 }
 
-
 TEST(WeightComparisionTest, _one_tonne_and_thousand_kg_should_be_equal)
 {
     quantity tonne(1.0, unit::TONNE);
     quantity kg(1000.0, unit::KG);
     ASSERT_EQ(tonne, kg);
+}
+
+TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_thousand_one_kg)
+{
+    quantity tonne(1.0, unit::TONNE);
+    quantity kg(1.0, unit::KG);
+    quantity_measurement measurement(&tonne, &kg);
+    ASSERT_EQ(1001.0, measurement.add_quantity(unit::KG.value));
 }
 
 int main(int argc, char **argv)
