@@ -4,6 +4,7 @@ public:
     enum UNIT_TYPE
     {
         LENGTH,
+        VOLUME
     };
 
     double value;
@@ -20,4 +21,7 @@ public:
     static const unit INCH;
     static const unit YARD;
     static const unit CM;
+    static const unit GALLON;
+    static const unit LITRE;
+    static const unit ML;
 };
