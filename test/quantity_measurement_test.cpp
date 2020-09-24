@@ -225,10 +225,10 @@ TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_tho
 //UC 8
 TEST(TemperatureComparisionTest, _212F_and_100C_should_be_equal)
 {
-    quantity value_in_fahrenheit(212.0, unit::FAHRENHITE);
-    quantity value_in_celsius(100.0, unit::CELSIUS);
+    quantity fahrenheit(212.0, unit::FAHRENHITE);
+    quantity celsius(100.0, unit::CELSIUS);
     quantity_measurement measurement;
-    ASSERT_EQ(value_in_fahrenheit.value, measurement.convert_celsius_to_fahrenheit(value_in_celsius.value));
+    ASSERT_EQ(fahrenheit.value, measurement.convert_celsius_to_fahrenheit(celsius.value));
 }
 
 int main(int argc, char **argv)
