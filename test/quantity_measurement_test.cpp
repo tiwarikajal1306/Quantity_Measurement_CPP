@@ -223,7 +223,7 @@ TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_tho
 }
 
 //UC 8
-TEST(TemperatureComparisionTest, _one_212F_and_100C_should_be_equal)
+TEST(TemperatureComparisionTest, _212F_and_100C_should_be_equal)
 {
     quantity value_in_fahrenheit(212.0, unit::FAHRENHITE);
     quantity value_in_celsius(100.0, unit::CELSIUS);
