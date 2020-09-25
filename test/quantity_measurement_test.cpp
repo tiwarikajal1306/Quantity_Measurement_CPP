@@ -154,16 +154,16 @@ TEST(LengthComparisionTest, _addition_of_two_inch_and_two_and_half_cm__should_be
 //UC 5
 TEST(VolumeComparisionTest, _one_gallon_and_three_point_seven_eight_litre_should_be_equal)
 {
-    quantity gallon(1.0, unit::GALLON);
-    quantity litre(3.78, unit::LITRE);
-    ASSERT_EQ(gallon, litre);
+    quantity one_gallon(1.0, unit::GALLON);
+    quantity three_point_seven_eight_litre(3.78, unit::LITRE);
+    ASSERT_EQ(one_gallon, three_point_seven_eight_litre);
 }
 
 TEST(VolumeComparisionTest, _one_litre_and_thousand_ml_should_be_equal)
 {
-    quantity litre(1.0, unit::LITRE);
-    quantity ml(1000.0, unit::ML);
-    ASSERT_EQ(litre, ml);
+    quantity one_litre(1.0, unit::LITRE);
+    quantity thousand_ml(1000.0, unit::ML);
+    ASSERT_EQ(one_litre, thousand_ml);
 }
 
 //UC 6

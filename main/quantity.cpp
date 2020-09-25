@@ -51,11 +51,12 @@ public:
 
         return result_quantity;
     }
-quantity convert_celsius_to_fahrenheit()
-{
-    quantity result_quantity;
-    result_quantity.value = value * 1.8 + 32;
-    result_quantity.unit_type = unit::FAHRENHITE;
-    return result_quantity;
-}
+    
+    quantity convert_celsius_to_fahrenheit()
+    {
+        quantity result_quantity;
+        result_quantity.value = value * 1.8 + 32;
+        result_quantity.unit_type = unit::FAHRENHITE;
+        return result_quantity;
+    }
 };
